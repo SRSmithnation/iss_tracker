@@ -1,8 +1,30 @@
-<h1>🛰️ ISS Live Tracker</h1>
+<div class="tracker-container">
+  <h1>🛰️ ISS Live Tracker</h1>
 
-<ul>
-  <li><strong>Latitude:</strong> <%= @iss_data["latitude"] %></li>
-  <li><strong>Longitude:</strong> <%= @iss_data["longitude"] %></li>
-  <li><strong>Altitude:</strong> <%= @iss_data["altitude"] %> km</li>
-  <li><strong>Velocity:</strong> <%= @iss_data["velocity"] %> km/h</li>
-</ul>
+  <div class="data-card">
+    <div class="data-row">
+    <span class="label">Last Updated</span>
+    <span class="value" id="timestamp"><%= Time.at(@iss_data["timestamp"]).strftime("%I:%M:%S %p") %></span>
+    </div>
+    <div class="data-row">
+      <span class="label">Latitude</span>
+      <span class="value" id="latitude"><%= @iss_data["latitude"].round(4) %>°</span>
+    </div>
+    <div class="data-row">
+      <span class="label">Longitude</span>
+      <span class="value" id="longitude"><%= @iss_data["longitude"].round(4) %>°</span>
+    </div>
+    <div class="data-row">
+      <span class="label">Altitude</span>
+      <span class="value" id="altitude"><%= @iss_data["altitude"].round(2) %> km</span>
+    </div>
+    <div class="data-row">
+      <span class="label">Velocity</span>
+      <span class="value" id="velocity"><%= @iss_data["velocity"].round(2) %> km/h</span>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <button id="refresh-btn">🔄 Refresh Position</button>
+</div>

@@ -8,3 +8,79 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+ body {
+    background-color: #0b0e1a;
+    color: #e0e6f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .tracker-container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .data-card {
+    background-color: #151a2e;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.15);
+    min-width: 300px;
+  }
+  
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #262c47;
+  }
+  
+  .data-row:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    color: #7d8bab;
+    font-weight: 500;
+  }
+  
+  .value {
+    color: #4fc3f7;
+    font-weight: 700;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+
+  #refresh-btn {
+    margin-top: 1.5rem;
+    background-color: #1a2340;
+    color: #4fc3f7;
+    border: 1px solid #2d3a5f;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #refresh-btn:hover {
+    background-color: #232d54;
+  }
+
+  #map {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin: 1.5rem auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.15);
+  }
